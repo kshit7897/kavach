@@ -132,7 +132,7 @@ export function ScienceSection() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-square bg-card rounded-3xl border border-border/60 p-8 lg:p-10 relative overflow-hidden shadow-soft-lg">
+            <div className="aspect-auto min-h-[580px] lg:aspect-square bg-card rounded-3xl border border-border/60 p-8 lg:p-10 relative overflow-hidden shadow-soft-lg">
               {/* Subtle background gradient */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
               
@@ -193,10 +193,10 @@ export function ScienceSection() {
                   transition={{ delay: 0.8 }}
                   className="text-center pt-10 mt-4 border-t border-border"
                 >
-                  <p className="text-7xl md:text-8xl font-bold gradient-text tracking-tight">
+                  <p className="text-6xl sm:text-7xl md:text-8xl font-bold gradient-text tracking-tight">
                     <AnimatedPercentage value={99} delay={1000} />%
                   </p>
-                  <p className="text-muted-foreground mt-2 text-lg">Reduction in EMF Radiation</p>
+                  <p className="text-muted-foreground mt-2 text-base sm:text-lg">Reduction in EMF Radiation</p>
                 </motion.div>
               </div>
             </div>

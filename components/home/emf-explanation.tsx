@@ -57,7 +57,7 @@ export function EMFExplanation() {
                 <span className="text-sm font-medium text-destructive tracking-wide">Understanding the Risk</span>
               </motion.div>
 
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-6 text-balance">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-6 text-balance">
                 What is EMF Radiation?
               </h2>
 

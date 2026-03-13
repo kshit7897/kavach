@@ -170,7 +170,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
-              className="flex items-center justify-center lg:justify-start gap-8 sm:gap-12"
+              className="flex flex-wrap items-center justify-center lg:justify-start gap-x-8 gap-y-6 sm:gap-12"
             >
               {[
                 { value: 99, suffix: "%", label: "Radiation Blocked" },
@@ -184,11 +184,11 @@ export function HeroSection() {
                   transition={{ delay: 0.9 + index * 0.1 }}
                   className="text-center lg:text-left"
                 >
-                  <p className="text-3xl sm:text-4xl font-bold gradient-text tracking-tight">
+                  <p className="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text tracking-tight whitespace-nowrap">
                     {stat.isDecimal ? stat.value : <AnimatedCounter value={stat.value} suffix={stat.suffix} />}
                     {stat.isDecimal && stat.suffix}
                   </p>
-                  <p className="text-xs sm:text-sm text-muted-foreground mt-1.5 tracking-wide">
+                  <p className="text-[10px] sm:text-xs md:text-sm text-muted-foreground mt-1 tracking-wide">
                     {stat.label}
                   </p>
                 </motion.div>
@@ -201,9 +201,9 @@ export function HeroSection() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="relative flex items-center justify-center"
+            className="relative flex items-center justify-center w-full lg:w-auto mt-12 lg:mt-0"
           >
-            <div className="relative w-[320px] h-[420px]">
+            <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-[3/4] sm:h-[420px]">
               {/* Radiation waves - danger state */}
               <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ${showShield ? 'opacity-0' : 'opacity-100'}`}>
                 {[...Array(6)].map((_, i) => (
@@ -267,10 +267,10 @@ export function HeroSection() {
               <motion.div
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="relative z-10 mx-auto"
+                className="relative z-10 mx-auto w-full h-full flex items-center justify-center"
               >
                 {/* Phone case/frame */}
-                <div className={`w-[180px] h-[360px] rounded-[3rem] transition-all duration-1000 ${
+                <div className={`relative w-[160px] sm:w-[180px] h-[320px] sm:h-[360px] rounded-[2.5rem] sm:rounded-[3rem] transition-all duration-1000 ${
                   showShield 
                     ? 'bg-gradient-to-b from-primary/20 to-primary/10 shadow-soft-lg border-2 border-primary/30' 
                     : 'bg-gradient-to-b from-gray-200 to-gray-300 shadow-lg border-2 border-gray-300'

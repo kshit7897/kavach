@@ -10,7 +10,7 @@ const products = [
     name: "ShieldCase Pro",
     description: "Maximum protection for power users",
     price: "$89",
-    features: ["99% EMF Block", "MagSafe Compatible", "Premium Finish"],
+    features: ["99% EMF Block", "MagSafe Plus", "Premium Finish"],
     badge: "Best Seller",
     highlight: true,
   },

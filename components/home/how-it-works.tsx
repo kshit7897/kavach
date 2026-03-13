@@ -59,7 +59,7 @@ export function HowItWorks() {
           >
             Technology
           </motion.p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-6 text-balance">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-6 text-balance">
             How ShieldCase Works
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -78,9 +78,9 @@ export function HowItWorks() {
             transition={{ duration: 0.8 }}
             className="relative order-2 lg:order-1"
           >
-            <div className="aspect-[4/5] bg-card rounded-3xl border border-border/60 overflow-hidden relative p-8 shadow-soft-lg">
+            <div className="aspect-auto min-h-[660px] lg:aspect-[4/5] bg-card rounded-3xl border border-border/60 overflow-hidden relative p-8 shadow-soft-lg">
               {/* Case layers visualization */}
-              <div className="absolute inset-8 flex items-center justify-center">
+              <div className="absolute top-12 left-8 right-8 flex items-center justify-center lg:inset-8 lg:flex">
                 <div className="relative w-full max-w-[220px] h-[300px]">
                   {/* Layers stack with 3D effect */}
                   {[
