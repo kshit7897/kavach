@@ -23,14 +23,14 @@ export function AboutHero() {
             Our Story
           </motion.p>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground text-balance">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground text-balance">
             Pioneering Protection
             <br />
             for a Wireless World
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            We believe technology should enhance your life without compromising your health. 
+            We believe technology should enhance your life without compromising your health.
             ShieldCase was founded on a simple mission: make radiation protection accessible to everyone.
           </p>
         </motion.div>

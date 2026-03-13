@@ -62,7 +62,7 @@ export function Testimonials() {
           >
             Testimonials
           </motion.p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-6 text-balance">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-4 text-balance">
             Trusted by Thousands
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">

@@ -110,20 +110,18 @@ export function CaseBuilder() {
                   className={`flex items-center gap-2 ${index <= currentStepIndex ? "cursor-pointer" : "cursor-not-allowed"}`}
                 >
                   <div
-                    className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-colors ${
-                      index < currentStepIndex
-                        ? "bg-accent text-accent-foreground"
-                        : index === currentStepIndex
+                    className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium transition-colors ${index < currentStepIndex
+                      ? "bg-accent text-accent-foreground"
+                      : index === currentStepIndex
                         ? "bg-primary text-primary-foreground"
                         : "bg-secondary text-muted-foreground"
-                    }`}
+                      }`}
                   >
                     {index < currentStepIndex ? <Check className="w-4 h-4" /> : index + 1}
                   </div>
                   <span
-                    className={`hidden md:block text-sm ${
-                      index === currentStepIndex ? "text-foreground font-medium" : "text-muted-foreground"
-                    }`}
+                    className={`hidden md:block text-sm ${index === currentStepIndex ? "text-foreground font-medium" : "text-muted-foreground"
+                      }`}
                   >
                     {step.label}
                   </span>
@@ -198,7 +196,7 @@ export function CaseBuilder() {
                   className="space-y-6"
                 >
                   <h2 className="text-2xl font-bold text-foreground">Select Your Phone</h2>
-                  
+
                   {/* Brand Selection */}
                   <div className="space-y-3">
                     <label className="text-sm font-medium text-foreground">Brand</label>
@@ -210,11 +208,10 @@ export function CaseBuilder() {
                             setSelectedBrand(phone.brand)
                             setSelectedModel("")
                           }}
-                          className={`px-6 py-3 rounded-xl text-sm font-medium transition-all ${
-                            selectedBrand === phone.brand
-                              ? "bg-primary text-primary-foreground"
-                              : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-                          }`}
+                          className={`px-6 py-3 rounded-xl text-sm font-medium transition-all ${selectedBrand === phone.brand
+                            ? "bg-primary text-primary-foreground"
+                            : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                            }`}
                         >
                           {phone.brand}
                         </button>
@@ -235,11 +232,10 @@ export function CaseBuilder() {
                           <button
                             key={model}
                             onClick={() => setSelectedModel(model)}
-                            className={`px-4 py-3 rounded-xl text-left text-sm transition-all border ${
-                              selectedModel === model
-                                ? "bg-primary text-primary-foreground border-primary"
-                                : "bg-secondary/50 text-foreground border-border hover:border-accent/50"
-                            }`}
+                            className={`px-4 py-3 rounded-xl text-left text-sm transition-all border ${selectedModel === model
+                              ? "bg-primary text-primary-foreground border-primary"
+                              : "bg-secondary/50 text-foreground border-border hover:border-accent/50"
+                              }`}
                           >
                             {model}
                           </button>
@@ -259,17 +255,16 @@ export function CaseBuilder() {
                   className="space-y-6"
                 >
                   <h2 className="text-2xl font-bold text-foreground">Choose Protection Level</h2>
-                  
+
                   <div className="space-y-4">
                     {protectionLevels.map((level) => (
                       <button
                         key={level.id}
                         onClick={() => setSelectedProtection(level.id)}
-                        className={`w-full p-6 rounded-xl text-left transition-all border relative ${
-                          selectedProtection === level.id
-                            ? "bg-primary/10 border-primary"
-                            : "bg-secondary/30 border-border hover:border-accent/50"
-                        }`}
+                        className={`w-full p-6 rounded-xl text-left transition-all border relative ${selectedProtection === level.id
+                          ? "bg-primary/10 border-primary"
+                          : "bg-secondary/30 border-border hover:border-accent/50"
+                          }`}
                       >
                         {level.popular && (
                           <span className="absolute top-4 right-4 px-2 py-1 bg-accent text-accent-foreground text-xs font-medium rounded-full">
@@ -299,17 +294,16 @@ export function CaseBuilder() {
                   className="space-y-6"
                 >
                   <h2 className="text-2xl font-bold text-foreground">Select Color</h2>
-                  
+
                   <div className="grid grid-cols-2 gap-4">
                     {colors.map((color) => (
                       <button
                         key={color.id}
                         onClick={() => setSelectedColor(color.id)}
-                        className={`p-4 rounded-xl text-left transition-all border ${
-                          selectedColor === color.id
-                            ? "border-primary ring-2 ring-primary/20"
-                            : "border-border hover:border-accent/50"
-                        }`}
+                        className={`p-4 rounded-xl text-left transition-all border ${selectedColor === color.id
+                          ? "border-primary ring-2 ring-primary/20"
+                          : "border-border hover:border-accent/50"
+                          }`}
                       >
                         <div
                           className="w-full aspect-video rounded-lg mb-3"
@@ -332,7 +326,7 @@ export function CaseBuilder() {
                 >
                   <h2 className="text-2xl font-bold text-foreground">Add Personalization</h2>
                   <p className="text-muted-foreground">Add custom engraving to make your case unique. (+$15)</p>
-                  
+
                   <div className="space-y-4">
                     <input
                       type="text"
@@ -363,7 +357,7 @@ export function CaseBuilder() {
                   className="space-y-6"
                 >
                   <h2 className="text-2xl font-bold text-foreground">Review Your Case</h2>
-                  
+
                   <div className="space-y-4">
                     <div className="bg-secondary/30 rounded-xl p-4 border border-border">
                       <p className="text-sm text-muted-foreground mb-1">Phone Model</p>

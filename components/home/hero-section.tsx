@@ -46,12 +46,12 @@ export function HeroSection() {
     <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden bg-background">
       {/* Mesh gradient background */}
       <div className="absolute inset-0 bg-gradient-mesh" />
-      
+
       {/* Top radial gradient */}
       <div className="absolute inset-0 bg-gradient-radial" />
 
       {/* Subtle dot pattern */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.4]"
         style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, oklch(0.55 0.25 260 / 0.15) 1px, transparent 0)`,
@@ -67,7 +67,7 @@ export function HeroSection() {
       >
         <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/20 via-accent/10 to-transparent blur-3xl" />
       </motion.div>
-      
+
       <motion.div
         animate={{ y: [0, 20, 0], x: [0, -10, 0] }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
@@ -98,7 +98,7 @@ export function HeroSection() {
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight text-foreground leading-[0.95] mb-8"
+              className="text-4xl sm:text-6xl md:text-5xl font-bold tracking-tight text-foreground leading-[0.95] mb-8"
             >
               {["Protect", "Your", "Brain"].map((word, i) => (
                 <motion.span
@@ -129,7 +129,7 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.5 }}
               className="max-w-xl mx-auto lg:mx-0 text-lg md:text-xl text-muted-foreground leading-relaxed mb-10"
             >
-              Scientifically engineered phone cases that reduce up to 99% of harmful 
+              Scientifically engineered phone cases that reduce up to 99% of harmful
               EMF radiation. Premium design, zero compromise.
             </motion.p>
 
@@ -140,9 +140,9 @@ export function HeroSection() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12"
             >
-              <Button 
-                asChild 
-                size="lg" 
+              <Button
+                asChild
+                size="lg"
                 className="h-14 px-8 text-base font-semibold bg-primary text-primary-foreground hover:bg-primary/90 rounded-full shadow-soft-lg transition-all duration-300 hover:shadow-lg hover:glow-sm"
               >
                 <Link href="/product">
@@ -150,10 +150,10 @@ export function HeroSection() {
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
               </Button>
-              <Button 
-                asChild 
-                variant="outline" 
-                size="lg" 
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
                 className="h-14 px-8 text-base font-medium text-foreground border-border/60 hover:bg-secondary hover:border-primary/30 rounded-full group transition-all duration-300"
               >
                 <Link href="/radiation" className="flex items-center gap-3">
@@ -236,8 +236,8 @@ export function HeroSection() {
                   <motion.div
                     key={size}
                     initial={{ scale: 0.8, opacity: 0 }}
-                    animate={showShield ? { 
-                      scale: 1, 
+                    animate={showShield ? {
+                      scale: 1,
                       opacity: [0.1, 0.3, 0.1],
                     } : {}}
                     transition={{
@@ -250,10 +250,10 @@ export function HeroSection() {
                     style={{ width: size, height: size }}
                   />
                 ))}
-                
+
                 {/* Shield icon */}
                 <motion.div
-                  animate={showShield ? { 
+                  animate={showShield ? {
                     scale: [1, 1.1, 1],
                   } : {}}
                   transition={{ duration: 2, repeat: Infinity }}
@@ -270,11 +270,10 @@ export function HeroSection() {
                 className="relative z-10 mx-auto w-full h-full flex items-center justify-center"
               >
                 {/* Phone case/frame */}
-                <div className={`relative w-[160px] sm:w-[180px] h-[320px] sm:h-[360px] rounded-[2.5rem] sm:rounded-[3rem] transition-all duration-1000 ${
-                  showShield 
-                    ? 'bg-gradient-to-b from-primary/20 to-primary/10 shadow-soft-lg border-2 border-primary/30' 
-                    : 'bg-gradient-to-b from-gray-200 to-gray-300 shadow-lg border-2 border-gray-300'
-                }`}>
+                <div className={`relative w-[160px] sm:w-[180px] h-[320px] sm:h-[360px] rounded-[2.5rem] sm:rounded-[3rem] transition-all duration-1000 ${showShield
+                  ? 'bg-gradient-to-b from-primary/20 to-primary/10 shadow-soft-lg border-2 border-primary/30'
+                  : 'bg-gradient-to-b from-gray-200 to-gray-300 shadow-lg border-2 border-gray-300'
+                  }`}>
                   {/* Phone screen */}
                   <div className="absolute inset-3 bg-card rounded-[2.2rem] overflow-hidden">
                     {/* Screen content */}
@@ -283,9 +282,8 @@ export function HeroSection() {
                       <motion.div
                         animate={{ scale: [1, 1.1, 1] }}
                         transition={{ duration: 2, repeat: Infinity }}
-                        className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 transition-colors duration-1000 ${
-                          showShield ? 'bg-primary/20' : 'bg-red-500/20'
-                        }`}
+                        className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 transition-colors duration-1000 ${showShield ? 'bg-primary/20' : 'bg-red-500/20'
+                          }`}
                       >
                         {showShield ? (
                           <WifiOff className="w-8 h-8 text-primary" />
@@ -293,7 +291,7 @@ export function HeroSection() {
                           <Wifi className="w-8 h-8 text-red-500" />
                         )}
                       </motion.div>
-                      
+
                       {/* Status text */}
                       <motion.div
                         key={showShield ? 'protected' : 'exposed'}
@@ -301,9 +299,8 @@ export function HeroSection() {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-center"
                       >
-                        <p className={`text-lg font-bold transition-colors duration-1000 ${
-                          showShield ? 'text-primary' : 'text-red-500'
-                        }`}>
+                        <p className={`text-lg font-bold transition-colors duration-1000 ${showShield ? 'text-primary' : 'text-red-500'
+                          }`}>
                           {showShield ? 'PROTECTED' : 'EXPOSED'}
                         </p>
                         <p className="text-xs text-muted-foreground mt-1">
@@ -318,9 +315,8 @@ export function HeroSection() {
                             initial={{ width: '90%' }}
                             animate={{ width: showShield ? '5%' : '90%' }}
                             transition={{ duration: 1, delay: showShield ? 0.5 : 0 }}
-                            className={`h-full rounded-full transition-colors duration-500 ${
-                              showShield ? 'bg-primary' : 'bg-red-500'
-                            }`}
+                            className={`h-full rounded-full transition-colors duration-500 ${showShield ? 'bg-primary' : 'bg-red-500'
+                              }`}
                           />
                         </div>
                         <div className="flex justify-between mt-1">
@@ -329,7 +325,7 @@ export function HeroSection() {
                         </div>
                       </div>
                     </div>
-                    
+
                     {/* Notch */}
                     <div className="absolute top-3 left-1/2 -translate-x-1/2 w-16 h-5 rounded-full bg-foreground/10" />
                   </div>
@@ -389,10 +385,10 @@ export function HeroSection() {
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           className="w-6 h-10 rounded-full border-2 border-primary/30 flex items-start justify-center p-2"
         >
-          <motion.div 
+          <motion.div
             animate={{ opacity: [0.5, 1, 0.5] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-1 h-2 bg-primary/60 rounded-full" 
+            className="w-1 h-2 bg-primary/60 rounded-full"
           />
         </motion.div>
       </motion.div>

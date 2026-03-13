@@ -46,14 +46,14 @@ export function ScienceSection() {
   return (
     <section className="py-12 lg:py-16 bg-background relative overflow-hidden border-b border-border/40">
       {/* Background pattern */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.3]"
         style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, oklch(0.55 0.25 260 / 0.08) 1px, transparent 0)`,
           backgroundSize: '48px 48px'
-        }} 
+        }}
       />
-      
+
       {/* Accent gradient */}
       <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-primary/5 to-transparent pointer-events-none" />
 
@@ -76,11 +76,11 @@ export function ScienceSection() {
               >
                 Research
               </motion.p>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-6 text-balance">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-6 text-balance">
                 Backed by Science
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Our technology is not just marketing claims. It is rigorously tested 
+                Our technology is not just marketing claims. It is rigorously tested
                 and verified by independent laboratories and research institutions.
               </p>
             </div>
@@ -112,9 +112,9 @@ export function ScienceSection() {
               ))}
             </div>
 
-            <Button 
-              asChild 
-              variant="outline" 
+            <Button
+              asChild
+              variant="outline"
               className="mt-4 rounded-full px-6 border-border hover:bg-secondary hover:border-primary/30 transition-all duration-300 group"
             >
               <Link href="/radiation">
@@ -135,7 +135,7 @@ export function ScienceSection() {
             <div className="aspect-auto min-h-[580px] lg:aspect-square bg-card rounded-3xl border border-border/60 p-8 lg:p-10 relative overflow-hidden shadow-soft-lg">
               {/* Subtle background gradient */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
-              
+
               {/* Before/After comparison */}
               <div className="h-full flex flex-col justify-center gap-10 relative">
                 {/* Without ShieldCase */}

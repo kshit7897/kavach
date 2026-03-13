@@ -20,14 +20,14 @@ export function RadiationHero() {
             <span className="text-sm text-destructive">Science & Research</span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground text-balance">
+          <h1 className="text-3xl md:text-5xl font-bold text-foreground text-balance">
             The Science Behind
             <br />
             <span className="text-accent">EMF Radiation</span>
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Understanding electromagnetic field radiation is the first step to protecting yourself. 
+            Understanding electromagnetic field radiation is the first step to protecting yourself.
             Explore the research, learn the risks, and discover how ShieldCase technology works.
           </p>
         </motion.div>

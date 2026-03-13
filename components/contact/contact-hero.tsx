@@ -14,12 +14,12 @@ export function ContactHero() {
           animate={{ opacity: 1, y: 0 }}
           className="space-y-6"
         >
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
             Get in Touch
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Have questions about our products or need support? We are here to help. 
+            Have questions about our products or need support? We are here to help.
             Reach out and our team will get back to you within 24 hours.
           </p>
         </motion.div>

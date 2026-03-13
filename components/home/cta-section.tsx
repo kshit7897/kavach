@@ -50,7 +50,7 @@ export function CTASection() {
             </span>
           </motion.div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground tracking-tight mb-6 text-balance">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground tracking-tight mb-6 text-balance">
             Start Protecting Yourself Today
           </h2>
           
