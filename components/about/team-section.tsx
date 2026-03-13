@@ -5,7 +5,7 @@ import { Linkedin, Twitter } from "lucide-react"
 
 const team = [
   {
-    name: "Dr. Sarah Chen",
+    name: "Parikshit Chauhan",
     role: "Founder & CEO",
     bio: "Materials engineer with 15+ years in radiation shielding technology.",
   },
