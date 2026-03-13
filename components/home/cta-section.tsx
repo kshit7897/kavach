@@ -13,7 +13,7 @@ const benefits = [
 
 export function CTASection() {
   return (
-    <section className="py-32 lg:py-40 bg-background relative overflow-hidden">
+    <section className="py-12 lg:py-16 bg-background relative overflow-hidden border-b border-border/40">
       {/* Complex background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-radial" />

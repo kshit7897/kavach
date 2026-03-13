@@ -38,7 +38,7 @@ const brands = ["Forbes", "TechCrunch", "Wired", "Healthline", "The Verge"]
 
 export function Testimonials() {
   return (
-    <section className="py-32 lg:py-40 bg-secondary/30 relative overflow-hidden">
+    <section className="py-12 lg:py-16 bg-secondary/30 relative overflow-hidden border-b border-border/40">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background pointer-events-none" />
       
@@ -52,7 +52,7 @@ export function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-12"
         >
           <motion.p
             initial={{ opacity: 0 }}
@@ -120,7 +120,7 @@ export function Testimonials() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="mt-20 pt-16 border-t border-border"
+          className="mt-12 pt-12 border-t border-border"
         >
           <p className="text-center text-sm text-muted-foreground mb-8 tracking-wide uppercase">
             As Featured In

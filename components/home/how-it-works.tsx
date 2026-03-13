@@ -38,7 +38,7 @@ const layerColors = [
 
 export function HowItWorks() {
   return (
-    <section className="py-32 lg:py-40 bg-secondary/30 relative overflow-hidden">
+    <section className="py-12 lg:py-16 bg-secondary/30 relative overflow-hidden border-b border-border/40">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background pointer-events-none" />
 
@@ -49,7 +49,7 @@ export function HowItWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-12"
         >
           <motion.p
             initial={{ opacity: 0 }}
@@ -63,7 +63,7 @@ export function HowItWorks() {
             How ShieldCase Works
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Advanced engineering meets elegant design. See how our multi-layer 
+            Advanced engineering meets elegant design. See how our multi-layer
             technology provides maximum protection without compromise.
           </p>
         </motion.div>

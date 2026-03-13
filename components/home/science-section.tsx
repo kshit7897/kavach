@@ -44,7 +44,7 @@ function AnimatedPercentage({ value, delay = 0 }: { value: number; delay?: numbe
 
 export function ScienceSection() {
   return (
-    <section className="py-32 lg:py-40 bg-background relative overflow-hidden">
+    <section className="py-12 lg:py-16 bg-background relative overflow-hidden border-b border-border/40">
       {/* Background pattern */}
       <div 
         className="absolute inset-0 opacity-[0.3]"

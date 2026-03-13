@@ -34,12 +34,12 @@ const products = [
 
 export function ProductShowcase() {
   return (
-    <section className="py-32 lg:py-40 bg-secondary/30 relative overflow-hidden">
+    <section className="py-12 lg:py-16 bg-secondary/30 relative overflow-hidden border-b border-border/40">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background pointer-events-none" />
-      
+
       {/* Subtle pattern */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.3]"
         style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, oklch(0.55 0.25 260 / 0.08) 1px, transparent 0)`,
@@ -54,7 +54,7 @@ export function ProductShowcase() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          className="text-center mb-12"
         >
           <motion.p
             initial={{ opacity: 0 }}
@@ -68,7 +68,7 @@ export function ProductShowcase() {
             Choose Your Protection
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Every ShieldCase is engineered with precision, tested in labs, and designed 
+            Every ShieldCase is engineered with precision, tested in labs, and designed
             to seamlessly integrate into your lifestyle.
           </p>
         </motion.div>
@@ -82,92 +82,79 @@ export function ProductShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className={`group relative rounded-3xl p-8 lg:p-10 transition-all duration-500 card-hover ${
-                product.highlight 
-                  ? "bg-gradient-to-br from-primary to-accent text-primary-foreground shadow-soft-lg border-gradient" 
-                  : "bg-card border border-border/60 hover:border-primary/30 shadow-soft"
-              }`}
+              className={`group relative rounded-3xl p-8 lg:p-10 transition-all duration-500 card-hover ${product.highlight
+                ? "bg-gradient-to-br from-primary to-accent text-primary-foreground shadow-soft-lg border-gradient"
+                : "bg-card border border-border/60 hover:border-primary/30 shadow-soft"
+                }`}
             >
               {product.badge && (
-                <span className={`absolute top-6 right-6 px-3 py-1.5 text-xs font-semibold rounded-full tracking-wide ${
-                  product.highlight 
-                    ? "bg-primary-foreground/20 text-primary-foreground" 
-                    : "bg-primary/10 text-primary"
-                }`}>
+                <span className={`absolute top-6 right-6 px-3 py-1.5 text-xs font-semibold rounded-full tracking-wide ${product.highlight
+                  ? "bg-primary-foreground/20 text-primary-foreground"
+                  : "bg-primary/10 text-primary"
+                  }`}>
                   {product.badge}
                 </span>
               )}
-              
+
               {/* Product Image Placeholder */}
-              <div className={`aspect-[4/5] rounded-2xl mb-8 flex items-center justify-center overflow-hidden relative ${
-                product.highlight ? "bg-primary-foreground/10" : "bg-secondary/50"
-              }`}>
+              <div className={`aspect-[4/5] rounded-2xl mb-8 flex items-center justify-center overflow-hidden relative ${product.highlight ? "bg-primary-foreground/10" : "bg-secondary/50"
+                }`}>
                 <motion.div
                   whileHover={{ scale: 1.03, rotateY: 5 }}
                   transition={{ duration: 0.4 }}
-                  className={`w-28 h-44 rounded-[2rem] shadow-xl relative ${
-                    product.highlight 
-                      ? "bg-gradient-to-b from-primary-foreground/30 to-primary-foreground/10" 
-                      : "bg-gradient-to-b from-primary/10 to-secondary"
-                  }`}
+                  className={`w-28 h-44 rounded-[2rem] shadow-xl relative ${product.highlight
+                    ? "bg-gradient-to-b from-primary-foreground/30 to-primary-foreground/10"
+                    : "bg-gradient-to-b from-primary/10 to-secondary"
+                    }`}
                 >
                   {/* Phone screen */}
-                  <div className={`absolute inset-2 rounded-[1.5rem] ${
-                    product.highlight ? "bg-primary-foreground/20" : "bg-card"
-                  }`} />
+                  <div className={`absolute inset-2 rounded-[1.5rem] ${product.highlight ? "bg-primary-foreground/20" : "bg-card"
+                    }`} />
                   {/* Notch */}
-                  <div className={`absolute top-4 left-1/2 -translate-x-1/2 w-8 h-2 rounded-full ${
-                    product.highlight ? "bg-primary-foreground/30" : "bg-muted"
-                  }`} />
+                  <div className={`absolute top-4 left-1/2 -translate-x-1/2 w-8 h-2 rounded-full ${product.highlight ? "bg-primary-foreground/30" : "bg-muted"
+                    }`} />
                 </motion.div>
-                
+
                 {/* Glow effect */}
                 {product.highlight && (
                   <div className="absolute inset-0 bg-gradient-to-t from-primary-foreground/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 )}
               </div>
 
-              <h3 className={`text-2xl font-semibold mb-2 tracking-tight ${
-                product.highlight ? "text-primary-foreground" : "text-foreground"
-              }`}>
+              <h3 className={`text-2xl font-semibold mb-2 tracking-tight ${product.highlight ? "text-primary-foreground" : "text-foreground"
+                }`}>
                 {product.name}
               </h3>
-              <p className={`text-sm mb-6 ${
-                product.highlight ? "text-primary-foreground/70" : "text-muted-foreground"
-              }`}>
+              <p className={`text-sm mb-6 ${product.highlight ? "text-primary-foreground/70" : "text-muted-foreground"
+                }`}>
                 {product.description}
               </p>
 
               {/* Features */}
               <ul className="space-y-3 mb-8">
                 {product.features.map((feature) => (
-                  <li key={feature} className={`flex items-center gap-3 text-sm ${
-                    product.highlight ? "text-primary-foreground/80" : "text-muted-foreground"
-                  }`}>
-                    <Check className={`w-4 h-4 flex-shrink-0 ${
-                      product.highlight ? "text-primary-foreground/70" : "text-primary"
-                    }`} />
+                  <li key={feature} className={`flex items-center gap-3 text-sm ${product.highlight ? "text-primary-foreground/80" : "text-muted-foreground"
+                    }`}>
+                    <Check className={`w-4 h-4 flex-shrink-0 ${product.highlight ? "text-primary-foreground/70" : "text-primary"
+                      }`} />
                     {feature}
                   </li>
                 ))}
               </ul>
 
-              <div className={`flex items-center justify-between pt-6 border-t ${
-                product.highlight ? "border-primary-foreground/20" : "border-border"
-              }`}>
-                <span className={`text-3xl font-bold tracking-tight ${
-                  product.highlight ? "text-primary-foreground" : "text-foreground"
+              <div className={`flex items-center justify-between pt-6 border-t ${product.highlight ? "border-primary-foreground/20" : "border-border"
                 }`}>
+                <span className={`text-3xl font-bold tracking-tight ${product.highlight ? "text-primary-foreground" : "text-foreground"
+                  }`}>
                   {product.price}
                 </span>
-                <Button 
-                  asChild 
-                  size="sm" 
-                  className={`rounded-full px-6 transition-all duration-300 ${
-                    product.highlight 
-                      ? "bg-primary-foreground text-primary hover:bg-primary-foreground/90" 
-                      : "bg-primary text-primary-foreground hover:bg-primary/90"
-                  }`}
+                <Button
+                  asChild
+                  size="sm"
+                  className={`rounded-full px-6 transition-all duration-300 ${product.highlight
+                    ? "bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+                    : "bg-primary text-primary-foreground hover:bg-primary/90"
+                    }`}
                 >
                   <Link href="/product">
                     View
@@ -185,11 +172,11 @@ export function ProductShowcase() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="text-center mt-16"
+          className="text-center mt-10"
         >
-          <Button 
-            asChild 
-            variant="ghost" 
+          <Button
+            asChild
+            variant="ghost"
             className="text-muted-foreground hover:text-foreground group"
           >
             <Link href="/product" className="flex items-center gap-2">

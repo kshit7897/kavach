@@ -10,6 +10,11 @@ const team = [
     bio: "Materials engineer with 15+ years in radiation shielding technology.",
   },
   {
+    name: "Charushila Swami",
+    role: "Co-Founder",
+    bio: "Visionary leader dedicated to creating health-conscious technology solutions.",
+  },
+  {
     name: "Michael Foster",
     role: "Chief Technology Officer",
     bio: "Former Apple engineer, specializing in mobile device design.",

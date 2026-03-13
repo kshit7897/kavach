@@ -77,7 +77,7 @@ export function HeroSection() {
       </motion.div>
 
       {/* Main content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-24 pb-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-12 lg:pt-24 lg:pb-16">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left - Text Content */}
           <div className="text-center lg:text-left">
